@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app" class="d-flex align-items-center flex-column pt-5 gap-2">
+        <button class="btn btn-primary" @click="getEmail()">Ottieni Email</button>
+        <div :class= "(finito === true ? 'd-block' : 'd-none')">
+            <div v-for="element,index in arrayEmail" class="text-center">{{index+1}}. {{element}}</div>
+        </div>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js' integrity='sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==' crossorigin='anonymous'></script>
+    <script src="./main.js"></script>
+</body>
+</html>
